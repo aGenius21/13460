@@ -4,7 +4,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-@TeleOp(name = "Test20222 (Blocks to Java)", group = "")
+@TeleOp(name = "Test20222", group = "")
 public class Test20222 extends LinearOpMode {
 
   private DcMotor newdrive;
