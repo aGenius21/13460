@@ -4,8 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-@TeleOp(name = "Test20222", group = "")
-public class Test20222 extends LinearOpMode {
+@TeleOp(name = "Test2022", group = "")
+public class Test2022 extends LinearOpMode {
 
   private DcMotor newdrive;
   private DcMotor olddrive;
