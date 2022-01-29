@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-@TeleOp(name = "DriveMode (Blocks to Java)")
+@TeleOp(name = "DriveMode")
 public class DriveMode extends LinearOpMode {
 
   private DcMotor rearleft;
@@ -16,9 +16,6 @@ public class DriveMode extends LinearOpMode {
   private DcMotor fingerMotor;
   private DcMotor wheelMotor;
 
-  /**
-   * This function is executed when this Op Mode is selected from the Driver Station.
-   */
   @Override
   public void runOpMode() {
     double drivePower;
@@ -34,7 +31,6 @@ public class DriveMode extends LinearOpMode {
     fingerMotor = hardwareMap.get(DcMotor.class, "fingerMotor");
     wheelMotor = hardwareMap.get(DcMotor.class, "wheelMotor");
 
-    // Put initialization blocks here.
     drivePower = 0.6;
     rearleft.setDirection(DcMotorSimple.Direction.REVERSE);
     frontright.setDirection(DcMotorSimple.Direction.REVERSE);
@@ -42,12 +38,9 @@ public class DriveMode extends LinearOpMode {
     armMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     waitForStart();
     if (opModeIsActive()) {
-      // Put run blocks here.
       while (opModeIsActive()) {
-        // Put loop blocks here.
         forward = gamepad1.left_stick_y * 0.4;
         strafe = -gamepad1.right_stick_y;
-        // this is turn, turn is strafe
         turn = gamepad1.left_stick_x * 0.55;
         frontleft.setPower(forward + strafe + turn);
         rearright.setPower((forward - strafe) + turn);
